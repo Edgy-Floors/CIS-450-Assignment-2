@@ -1,18 +1,22 @@
+/*
+ * EJ Flores
+ * Accelerate.cs
+ * Assignment 2
+ * This file is the class that ups your personal speed value.
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Accelerate : MonoBehaviour
+public class Accelerate : Spell
 {
-    // Start is called before the first frame update
-    void Start()
+    Buff buff = new Buff();
+    public override void castSpell()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        base.numUsed++;
+        base.speed += 1.9F;
+        selectorText.text = buff.cast();
+        myText.text = "Speed: " + base.speed;
     }
 }

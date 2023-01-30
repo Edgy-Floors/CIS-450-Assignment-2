@@ -1,18 +1,14 @@
+/*
+ * EJ Flores
+ * ICastable.cs
+ * Assignment 2
+ * This file is the interface for castable classes.
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ICastable : MonoBehaviour
+public interface ICastable
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string cast();
 }

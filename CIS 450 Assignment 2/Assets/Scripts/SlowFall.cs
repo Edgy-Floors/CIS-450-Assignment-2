@@ -1,18 +1,22 @@
+/*
+ * EJ Flores
+ * SlowFall.cs
+ * Assignment 2
+ * This file is the class that enables slow falling.
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlowFall : MonoBehaviour
+public class SlowFall : Spell
 {
-    // Start is called before the first frame update
-    void Start()
+    Buff buff = new Buff();
+    public override void castSpell()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        base.numUsed++;
+        base.slowGravity = true;
+        selectorText.text = buff.cast();
+        myText.text = "SlowGravity: " + base.slowGravity;
     }
 }

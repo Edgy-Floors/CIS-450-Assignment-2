@@ -1,18 +1,22 @@
+/*
+ * EJ Flores
+ * Defend.cs
+ * Assignment 2
+ * This file is the class that adds shields to yourself.
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Defend : MonoBehaviour
+public class Defend : Spell
 {
-    // Start is called before the first frame update
-    void Start()
+    Buff buff = new Buff();
+    public override void castSpell()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        base.numUsed++;
+        base.sheild += 5;
+        selectorText.text = buff.cast();
+        myText.text = "Sheild: " + base.sheild;
     }
 }
